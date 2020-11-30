@@ -22,15 +22,15 @@ public class Contact {
     @Column(name = "firstName")
     private String firstName;
     // Фамилия
-    @Column(name = "lastName")
-    private String lastName;
+    @Column(name = "info")
+    private String info;
 
     public Contact() {
     }
 
-    public Contact(String firstName, String lastName) {
+    public Contact(String firstName, String info) {
         this.firstName = firstName;
-        this.lastName = lastName;
+        this.info = info;
     }
 
     public Integer getContactId() {
@@ -45,16 +45,18 @@ public class Contact {
         this.firstName = firstName;
     }
 
-    public String getLastName() {
-        return lastName;
+    public String getInfo() {
+        return info;
     }
 
-    public void setLastName(String lastName) {
-        this.lastName = lastName;
+    public void setInfo(String info) {
+        this.info = info;
     }
+
+
 
     @Override
     public String toString() {
-        return "Contact{" + "contactId=" + id + ", firstName=" + firstName + ", lastName=" + lastName + '}';
+        return "Contact{" + "contactId=" + id + ", firstName=" + firstName + ", info=" + info + '}';
     }
 }

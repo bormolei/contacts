@@ -70,6 +70,12 @@
             <artifactId>tomcat-dbcp</artifactId>
             <version>9.0.36</version>
         </dependency>
+        <dependency>
+            <groupId>junit</groupId>
+            <artifactId>junit</artifactId>
+            <version>RELEASE</version>
+            <scope>test</scope>
+        </dependency>
     </dependencies>
 
 
