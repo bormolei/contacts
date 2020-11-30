@@ -6,7 +6,7 @@ import contacts.mvc.model.Contact;
 
 public class Service
 {
-    public boolean addContact(Contact model)
+    public static boolean addContact(Contact model)
     {
         try
         {

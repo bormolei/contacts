@@ -1,32 +1,16 @@
 package contacts.mvc.model;
 
+import contacts.mvc.service.Service;
 import org.junit.Test;
 
 import static org.junit.Assert.*;
 
 public class ContactTest {
-    Contact contact = new Contact();
-
-
     @Test
-    public void getFirstName() {
-        contact.setFirstName("test1");
-        assertSame("test1",contact.getFirstName());
-    }
-
-    @Test
-    public void setFirstName() {
-        contact.setFirstName("test1");
-        assertSame("test1",contact.getFirstName());
-    }
-
-    @Test
-    public void getInfo() {
-        contact.setInfo("testinfo");
-        assertSame("testinfo", contact.getInfo());
-    }
-
-    @Test
-    public void setInfo() {
+    public void NewContact() {
+        Contact contact1 = new Contact();
+        contact1.setInfo("test info");
+        contact1.setFirstName("test1");
+        assertTrue(Service.addContact(contact1));
     }
 }
