@@ -8,23 +8,21 @@ import javax.persistence.*;
 @Component
 @Scope("prototype")
 @Entity
-@Table(name = "phone")
-public class Phone implements Model {
+@Table(name = "steam")
+public class Steam implements Model {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    //Номер
-    @Column(name = "number")
-    private String number;
 
-    public String getNumber() {
-        return number;
+    @Column(name = "steam")
+    private String steam;
 
-
+    public String getSteam() {
+        return steam;
     }
 
-    public void setNumber(String number) {
-        this.number = number;
+    public void setNumber(String steam) {
+        this.steam = steam;
     }
 }

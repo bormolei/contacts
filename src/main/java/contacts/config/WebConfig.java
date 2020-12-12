@@ -23,14 +23,4 @@ public class WebConfig implements WebMvcConfigurer{
         viewResolver.setSuffix(".jsp");
         return viewResolver;
     }
-
-    @Bean(name = "multipartResolver")
-    public CommonsMultipartResolver multipartResolver() {
-        return new CommonsMultipartResolver();
-    }
-
-    @Override
-    public void addResourceHandlers(ResourceHandlerRegistry registry) {
-        registry.addResourceHandler("/res/**").addResourceLocations("/res/");
-    }
 }

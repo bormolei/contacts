@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8" ?>
 <hibernate-configuration xmlns="http://www.hibernate.org/xsd/orm/cfg">
 	<session-factory>
-		<property name="connection.url">jdbc:postgresql://localhost:5432/postgres</property>
-		<property name="hibernate.default_schema">contacts</property>
+		<property name="connection.url">jdbc:postgresql://127.0.0.1:5432/contacts</property>
+		<property name="hibernate.default_schema">contactslist</property>
 		<property name="connection.driver_class">org.postgresql.Driver</property>
 		<property name="connection.username">postgres</property>
 		<property name="connection.password">oxitxmq5q2</property>

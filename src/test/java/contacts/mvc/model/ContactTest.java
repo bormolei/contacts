@@ -8,9 +8,20 @@ import static org.junit.Assert.*;
 public class ContactTest {
     @Test
     public void NewContact() {
-        Contact contact1 = new Contact();
-        contact1.setInfo("test info");
-        contact1.setFirstName("test1");
-        assertTrue(Service.addContact(contact1));
+        assertTrue(Service.addContact("TestName","TestInfo"
+        ,"TestSkype","89109256512","gasdxzcasd","test@mail.ru"));
     }
+
+    @Test
+    public void DeleteContact() {
+        assertTrue(Service.deleteContact(1));
+    }
+
+    @Test
+    public void updateContact() {
+        assertTrue(Service.updateContact(1,"TestNewName"
+        ,"TestNewItnfo"));
+    }
+
+
 }

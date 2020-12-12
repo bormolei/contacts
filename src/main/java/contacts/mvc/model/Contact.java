@@ -13,7 +13,7 @@ import javax.persistence.*;
 @Scope("prototype")
 @Entity
 @Table(name = "contacts")
-public class Contact {
+public class Contact implements Model {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
@@ -24,6 +24,39 @@ public class Contact {
     // Фамилия
     @Column(name = "info")
     private String info;
+
+    @Column(name = "mail")
+    private Integer mail;
+
+    @Column(name = "skype")
+    private Integer skype;
+
+    @Column(name = "steam")
+    private Integer steam;
+
+    public Integer getMail() {
+        return mail;
+    }
+
+    public void setMail(Integer mail) {
+        this.mail = mail;
+    }
+
+    public Integer getSkype() {
+        return skype;
+    }
+
+    public void setSkype(Integer skype) {
+        this.skype = skype;
+    }
+
+    public Integer getSteam() {
+        return steam;
+    }
+
+    public void setSteam(Integer steam) {
+        this.steam = steam;
+    }
 
     public Contact() {
     }
